@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.27703.2042
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Civil2010ReportConverter", "Civil2010ReportConverter\Civil2010ReportConverter.csproj", "{EF3E3817-6807-4D8D-8728-F34529EF1591}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{EF3E3817-6807-4D8D-8728-F34529EF1591}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EF3E3817-6807-4D8D-8728-F34529EF1591}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EF3E3817-6807-4D8D-8728-F34529EF1591}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EF3E3817-6807-4D8D-8728-F34529EF1591}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {700E8F33-3B31-4D9A-8D00-095901A46A4B}
+	EndGlobalSection
+EndGlobal
