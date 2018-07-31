@@ -50,23 +50,26 @@ namespace Civil2010ReportConverter
 
                 //SaveNXYH(points, "test.txt");
 
-                SaveFull(points, _fileToSave);
 
-                string msg = "Operation completed. Do you want to convert another file?";
-                MessageBoxResult result = MessageBox.Show(msg,
-                "Operation completed", MessageBoxButton.YesNo, MessageBoxImage.Warning);
-                if (result == MessageBoxResult.No)
+                if (CheckOutFile(_fileToSave))
                 {
-                    // If user doesn't want to convert another file, exit.
-                    Application.Current.Shutdown();
+                    try
+                    {
+                        SaveFull(points, _fileToSave);
+
+                        string msg = "Operation completed.";
+                        MessageBoxResult result = MessageBox.Show(msg,
+                        "Operation completed", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    }
+                    catch (Exception)
+                    {
+
+                        MessageBox.Show("Unexpected error. Failed to save file.");
+                    }
                 }
-                else
-                {
-                    _fileToOpen = "";
-                    _fileToSave = "";
-                    txtSelect.Text = _fileToOpen;
-                    txtOutput.Text = _fileToSave;
-                }
+
+
+
 
 
 
@@ -107,6 +110,20 @@ namespace Civil2010ReportConverter
 
         private bool CheckOutFile(string fileName)
         {
+            if (File.Exists(fileName))
+            {
+                string msg = "File already exists. Do you want to overwrite it?";
+                MessageBoxResult result = MessageBox.Show(msg,
+                "Operation completed", MessageBoxButton.YesNo, MessageBoxImage.Warning);
+                if (result == MessageBoxResult.No)
+                {
+                    return false;
+                }
+                else
+                {
+                    return true;
+                }
+            }
 
             return true;
         }
@@ -322,6 +339,11 @@ namespace Civil2010ReportConverter
         private void txtOutput_TextChanged(object sender, TextChangedEventArgs e)
         {
             _fileToSave = txtOutput.Text;
+        }
+
+        private void txtSelect_TextChanged(object sender, TextChangedEventArgs e)
+        {
+            _fileToOpen = txtSelect.Text;
         }
     }
 }
