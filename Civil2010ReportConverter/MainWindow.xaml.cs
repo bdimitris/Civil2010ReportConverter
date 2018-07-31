@@ -101,10 +101,32 @@ namespace Civil2010ReportConverter
 
         private bool CheckInFile(string fileName)
         {
+
+
             if (_fileToOpen=="" || _fileToOpen == null || _fileToSave == "" || _fileToSave ==null)
             {
                 return false;
             }
+
+
+            try
+            {
+                List<string> linesFromFile = GetLinesFromFile(_fileToOpen, out int numberOfFetchedLines);
+
+                List<string> listOfStations = GetNumberOfStations(linesFromFile);
+
+                if (listOfStations == null)
+                {
+                    MessageBox.Show("There are no stations in the file.");
+                    return false;
+                }
+            }
+            catch (Exception)
+            {
+                MessageBox.Show("Unexpected error.");
+                return false;
+            }
+
             return true;
         }
 
