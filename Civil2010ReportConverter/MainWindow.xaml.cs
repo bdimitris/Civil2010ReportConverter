@@ -111,6 +111,8 @@ namespace Civil2010ReportConverter
 
             try
             {
+                var listCount = File.ReadLines(fileName).Count();
+
                 List<string> linesFromFile = GetLinesFromFile(_fileToOpen, out int numberOfFetchedLines);
 
                 List<string> listOfStations = GetNumberOfStations(linesFromFile);
@@ -177,6 +179,8 @@ namespace Civil2010ReportConverter
             // Read data from file.
             using (StreamReader sr = File.OpenText(filename))
             {
+ 
+
                 string input = null;
                 int i = 0;
                 while ((input = sr.ReadLine()) != null)
