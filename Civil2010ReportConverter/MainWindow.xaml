@@ -17,8 +17,8 @@
         <TextBox x:Name="txtSelect" HorizontalAlignment="Left" Height="23" Margin="143,30,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="309" TextChanged="txtSelect_TextChanged"/>
         <Label Content="Convert Autocad Civil 3D 2010 &quot;civilreport.html&quot; (Feature Line Report) to text file" Margin="50,177,50,0" VerticalAlignment="Top" Height="26" HorizontalAlignment="Center" Width="390" FontSize="10"/>
         <TextBox x:Name="txtOutput" HorizontalAlignment="Left" Height="23" Margin="143,70,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="309" TextChanged="txtOutput_TextChanged"/>
-        <Button x:Name="btnConvert" Content="Convert file" HorizontalAlignment="Center" Margin="100,112,100,50"  Width="100" Click="btnConvert_Click" Height="22"/>
-        <TextBlock Margin="48,161,52,0" TextWrapping="Wrap" Text="Please select a file to convert" VerticalAlignment="Top" TextAlignment="Center" Height="16"/>
+        <Button x:Name="btnConvert" Content="Convert File" HorizontalAlignment="Center" Margin="100,112,100,50"  Width="100" Click="btnConvert_Click" Height="22"/>
+        <TextBlock Margin="48,161,52,0" TextWrapping="Wrap" Text="Click &quot;Convert File&quot; to start" VerticalAlignment="Top" TextAlignment="Center" Height="16"/>
 
     </Grid>
 
