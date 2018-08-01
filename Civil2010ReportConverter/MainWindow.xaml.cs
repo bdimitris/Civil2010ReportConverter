@@ -115,15 +115,16 @@ namespace Civil2010ReportConverter
 
                 List<string> listOfStations = GetNumberOfStations(linesFromFile);
 
-                if (listOfStations == null)
+                if (listOfStations == null | listOfStations.Count==0)
                 {
                     MessageBox.Show("There are no stations in the file.");
                     return false;
                 }
             }
-            catch (Exception)
+            catch (Exception e)
             {
-                MessageBox.Show("Unexpected error.");
+                MessageBox.Show(e.Message);
+                
                 return false;
             }
 
